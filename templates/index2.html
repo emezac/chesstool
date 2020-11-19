@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Zugzwang Web </title>
+  <link rel="stylesheet" href="/css/chessboard-1.0.0.min.css" crossorigin="anonymous">
+  <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script src="{{url_for('static', filename='js/chessboard.js') }}" crossorigin="anonymous"></script>
+  <script src="{{url_for('static', filename='js/chess.js') }}" crossorigin="anonymous"></script>
+  <script>
+     function goBack() {
+       window.history.back();
+   }
+  </script>
+</head>
+<body>
+<h3> Just another chesstool</h3>
+<img src="../img/logochessm.png" alt=""logo">
+<table>
+<tbody>
+<tr>
+<td>
+</td>
+<td>
+  <p style="text-align: center;">&nbsp;</p>
+    <p style="text-align: center;"><strong>Moves</strong></p>
+    <textarea id="moves" name="arena" rows="20" cols="50"></textarea>
+      <div id="myload">
+       <p id="row1"></p>
+    </div>
+    <p style="text-align: center;"><strong>Game</strong></p>
+    <textarea id="arena" name="arena" rows="4" cols="50"></textarea>
+    <input id='arenaBtn' type=submit value=LoadGame style= "display:none">
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div id="wrapper">
+<p>
+<button id="processBtn">Format file</button>
+<input id='fileproc' type=txt value='{{filename}}'>
+<a href="/browser" target="popup" onclick="window.open('/browser','Dir','width=1000,height=600')">Load Games from disk</a>
+</p>
+</div>
+<script src="{{url_for('static', filename='js/game.js') }}" crossorigin="anonymous"> </script>
+<button onclick="goBack()">Go Back</button>
+<footer>
+  <p>Author: Enrique Meza <br>
+</footer>
+</body>
+</html>

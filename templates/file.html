@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>{{gameName}}</title>
+    <script language="javascript" type="text/javascript">
+      function windowClose(moves) {
+        var txt= '{{gameName}}' + ': '+'{{tags}}';
+        var txt2= '{{moves}}';
+        myWindow = window.open('','_parent','');
+        myWindow.opener.document.getElementById("arena").value=txt;
+        myWindow.opener.document.getElementById("moves").value=txt2;
+        myWindow.opener.document.getElementById("row1").innerHTML += '<a href="/loadBoard/{{gameName}}.pgn.html"> | Play Game : {{gameName}}</a>';
+        myWindow.opener.document.getElementById("arenaBtn").style.display = "block";
+        myWindow.opener.document.getElementById("myload").style.display = "block";
+        window.close();
+      }
+    </script>
+</head>
+<body>
+    <p>Current file: {{ currentFile }}</p>
+    <p>
+        <table>
+            {% for key, value in fileProperties.items() %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </p>
+    <input id='closeBtn' type="button" value="Close this window" onclick="windowClose();">
+</body>
+</html>

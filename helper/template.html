@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>$title </title>
+  <link rel="stylesheet" href="/css/website.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/chessboard-1.0.0.min.css" crossorigin="anonymous">
+  <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script src="{{url_for('static', filename='js/chessboard.js') }}" crossorigin="anonymous"></script>
+  <script src="{{url_for('static', filename='js/chess.js') }}" crossorigin="anonymous"></script>
+  <script>
+      function windowClose() {
+        window.close();
+      }
+  </script>
+</head>
+<body>
+<img src="../img/logochessm.png" alt=""logo">
+<table>
+<tbody>
+<tr>
+<td>
+<p>
+<!--- Board ------------------------------------------------------>
+<div id="myBoard" style="width: 400px"></div>
+<!--- End -------------------------------------------------------->
+</p>
+</td>
+<td>
+  <div class="container-4e1ee">
+  <button id="clearBoardBtn">Clear Board</button>
+  $set_button
+  </div>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<script src="{{url_for('static', filename='js/game.js') }}" crossorigin="anonymous"> </script>
+<script>
+var board = Chessboard('myBoard')
+
+$set_position
+</script>
+ <input id='closeBtn' type="button" value="Close this window" onclick="windowClose();">
+<footer>
+  <p>Author: Enrique Meza <br>
+</footer>
+</body>
+</html>

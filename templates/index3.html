@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Zugzwang Web </title>
+  <link rel="stylesheet" href="/css/chessboard-1.0.0.min.css" crossorigin="anonymous">
+  <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script src="{{url_for('static', filename='js/chessboard.js') }}" crossorigin="anonymous"></script>
+  <script src="{{url_for('static', filename='js/chess.js') }}" crossorigin="anonymous"></script>
+</head>
+<body>
+<img src="../img/logochessm.png" alt=""logo">
+<table>
+<tbody>
+<tr>
+<td>
+<p><img src="../img/board.png" alt="board" width="327" height="327" /></p>
+</td>
+<td>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong>Arena</strong></p>
+<textarea id="arena" name="arena" rows="1" cols="50"> {{game}}</textarea>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div id="wrapper">
+<p>
+<button id="loadGameBtn">Load Game</button>
+</p>
+</div>
+<script src="{{url_for('static', filename='js/game.js') }}" crossorigin="anonymous"> </script>
+<footer>
+  <p>Author: Enrique Meza <br>
+</footer>
+</body>
+</html>

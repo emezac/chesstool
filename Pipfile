@@ -1,0 +1,7 @@
+[packages]
+flask = "*"
+Image = "*"
+cheetah3 = {path = "./cheetah/dist/Cheetah3-3.2.7a0.tar.gz"}
+
+[requires]
+python_version= "3.8"

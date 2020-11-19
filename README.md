@@ -11,9 +11,27 @@ Install `python 3.8` if you don't have it, and then do:
 `pip install pipenv`
 `pipenv install`
 
+Download and install cheetah from here:
+
+https://github.com/CheetahTemplate3/cheetah3
+
+then
+
+under cheetah directory execute: 
+
+`python3 setup.py sdist`
+
+finally execute :
+
+`pipenv install cheetah/dist/Cheetah3-3.2.7a0.tar.gz` 
+
+Download and install pgn-extract:
+https://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/
+
 #Please change this line on main.py
 
-FILE_SYSTEM_ROOT = "/home/emeza/code/python/tarea1/position"
+FILE_SYSTEM_ROOT = "/Users/enrique/code/new/chesstool/pgnfiles"
+
 accordingly your environment
 
 ## Start web service
